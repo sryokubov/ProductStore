@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Catalog</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="filter-buttons">
+      <button data-category="jewelery">Jewelery</button>
+      <button data-category="electronics">Electronics</button>
+      <button data-category="men's clothing">Men's clothing</button>
+      <button data-category="women's clothing">Women's clothing</button>
+    </div>
+    <div class="cards"></div>
+
+    <template>
+      <div class="card">
+        <div class="card-image-container">
+          <img src="cardImage" alt="" class="card-image" />
+        </div>
+        <h3 class="card-title">cardTitle</h3>
+        <p class="card-price">cardPrice</p>
+        <p class="card-description">cardDescription</p>
+        <p class="card-category">Category: cardCategory</p>
+        <button class="buy-button">Buy</button>
+      </div>
+    </template>
+
+    <div id="popup-window">
+      <div class="popup-card">
+        <div class="popup-card-image-container">
+          <img src="popupImage" alt="" class="popup-card-image" />
+        </div>
+        <h3 class="popup-card-title">popupTitle</h3>
+        <p class="popup-card-price">popupPrice</p>
+        <p class="popup-card-description">popupDescription</p>
+        <p class="popup-card-category">Category: popupCategory</p>
+        <button id="close-button">Close</button>
+      </div>
+    </div>
+
+    <div class="loader" style="display: none"></div>
+    <script src="./script.js"></script>
+  </body>
+</html>

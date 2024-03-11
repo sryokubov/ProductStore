@@ -1,0 +1,178 @@
+body {
+  font-family: "Inter", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.filter-buttons {
+  display: flex;
+  gap: 10px;
+  width: 1200px;
+  margin: 20px auto;
+  text-align: center;
+}
+
+.filter-buttons button {
+  width: 25%;
+  height: 40px;
+  border-radius: 40px;
+  border: 0;
+  background-color: #de7532;
+  font-family: "Inter";
+  color: white;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.card {
+  width: calc(25% - 20px);
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  background-color: white;
+  text-align: center;
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card-image-container {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.card-image {
+  max-width: 100%;
+  height: auto;
+}
+
+.card-title {
+  margin: 10px 0;
+  font-size: 1.2rem;
+}
+
+.card-price {
+  font-weight: bold;
+}
+
+.card-category {
+  font-style: italic;
+  color: #666;
+  margin-top: 10px;
+}
+
+.buy-button {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.buy-button:hover {
+  background-color: #2980b9;
+}
+
+.loader {
+  position: absolute;
+  top: calc(50% - 60px);
+  left: calc(50% - 60px);
+  border: 16px solid #f3f3f3;
+  border-top: 16px solid #3498db;
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+#popup-window {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  display: none;
+}
+
+.popup-card {
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  padding: 20px;
+  max-width: 80%;
+  overflow: hidden;
+}
+
+.popup-card-image-container {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.popup-card-image {
+  max-width: 100%;
+  height: auto;
+}
+
+.popup-card-title {
+  margin: 10px 0;
+  font-size: 1.2rem;
+}
+
+.popup-card-price {
+  font-weight: bold;
+}
+
+.popup-card-category {
+  font-style: italic;
+  color: #666;
+  margin-top: 10px;
+}
+
+#close-button {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  margin-top: 20px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+#close-button:hover {
+  background-color: #c0392b;
+}
